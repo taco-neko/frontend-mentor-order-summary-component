@@ -1,0 +1,142 @@
+:root {
+  --pale-blue: #e0e8ff;
+  --bright-blue: #3829e0;
+  --v-pale-blue: #f5f7ff;
+  --desat-blue: #7280a7;
+  --dark-blue: #1f2f56;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  padding: 1.5rem;
+  background: var(--pale-blue) url(./images/pattern-background-mobile.svg) 0 0/100% 25vh no-repeat;
+}
+@media screen and (min-width: 40em) {
+  body {
+    background: var(--pale-blue) url(./images/pattern-background-desktop.svg) 0 0/100% 35vh no-repeat;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--bright-blue);
+  outline-offset: 2px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+p {
+  color: var(--desat-blue);
+  margin: 1em auto 1.5em;
+  line-height: 1.5em;
+  width: 95%;
+}
+
+a {
+  color: var(--bright-blue);
+}
+a:hover, a:focus-visible {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+button {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.card {
+  width: 25rem;
+  max-width: 100%;
+  background-color: white;
+  margin: 5rem auto;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 3em 3em -0.5em rgba(114, 128, 167, 0.3);
+  text-align: center;
+}
+.card > img {
+  width: 100%;
+}
+.card__content {
+  padding: 2em 1.5em;
+}
+@media screen and (min-width: 40em) {
+  .card__content {
+    padding: 2em 2.5em;
+  }
+}
+
+.attribution {
+  text-align: center;
+}
+
+.plan {
+  background-color: var(--v-pale-blue);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1.5em;
+}
+.plan img {
+  width: 3em;
+}
+.plan p {
+  text-align: left;
+  margin: 0;
+}
+.plan p:first-of-type, .plan a {
+  font-weight: 700;
+}
+.plan p:first-of-type {
+  color: var(--dark-blue);
+}
+.plan a {
+  font-size: 0.875rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.75em;
+  border: none;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+.btn__payment {
+  background-color: var(--bright-blue);
+  color: white;
+  box-shadow: 0 0.75em 1em 0.5em rgba(56, 41, 224, 0.25);
+}
+.btn__payment:hover, .btn__payment:focus-visible {
+  opacity: 0.7;
+}
+.btn__cancel {
+  background-color: transparent;
+  color: var(--dark-blue);
+  opacity: 0.75;
+}
+.btn__cancel:hover, .btn__cancel:focus-visible {
+  opacity: 1;
+}
+.btn__cancel:focus-visible {
+  outline: 2px solid var(--dark-blue);
+}
